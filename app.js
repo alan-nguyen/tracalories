@@ -42,7 +42,8 @@ const App = (function(ItemCtrl, UICtrl) {
   // Public method
   return {
     init: function() {
-      console.log('Initializing App...');
+      // Fetch items from data structure
+      const items = ItemCtrl.getItems();
     }
   };
 })(ItemCtrl, UICtrl);
