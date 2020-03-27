@@ -31,4 +31,14 @@ const ItemCtrl = (function() {
 const UICtrl = (function() {})();
 
 // App Controller
-const App = (function(ItemCtrl, UICtrl) {})(ItemCtrl, UICtrl);
+const App = (function(ItemCtrl, UICtrl) {
+  // Public method
+  return {
+    init: function() {
+      console.log('Initializing App...');
+    }
+  };
+})(ItemCtrl, UICtrl);
+
+// Initialize App
+App.init();
