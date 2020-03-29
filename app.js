@@ -62,7 +62,10 @@ const UICtrl = (function() {
 // App Controller
 const App = (function(ItemCtrl, UICtrl) {
   // Load event listeners
-  const loadEventListeners = function() {};
+  const loadEventListeners = function() {
+    // Get UI Selectors
+    const UISelectors = UICtrl.getSelectors();
+  };
 
   // Public method
   return {
