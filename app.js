@@ -34,7 +34,8 @@ const ItemCtrl = (function() {
 // UI Controller
 const UICtrl = (function() {
   const UISelectors = {
-    itemList: '#item-list'
+    itemList: '#item-list',
+    addBtn: '.add-btn'
   };
   // Public methods
   return {
@@ -63,8 +64,11 @@ const UICtrl = (function() {
 const App = (function(ItemCtrl, UICtrl) {
   // Load event listeners
   const loadEventListeners = function() {
-    // Get UI Selectors
+    // Get UI selectors
     const UISelectors = UICtrl.getSelectors();
+
+    // Add item event
+    document.querySelector();
   };
 
   // Public method
