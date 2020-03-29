@@ -73,6 +73,13 @@ const App = (function(ItemCtrl, UICtrl) {
       .addEventListener('click', itemAddSubmit);
   };
 
+  // Add item submit
+  const itemAddSubmit = function(e) {
+    console.log('Add');
+
+    e.preventDefault();
+  };
+
   // Public method
   return {
     init: function() {
