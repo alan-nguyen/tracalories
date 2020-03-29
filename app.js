@@ -58,6 +58,9 @@ const UICtrl = (function() {
 
 // App Controller
 const App = (function(ItemCtrl, UICtrl) {
+  // Load event listeners
+  const loadEventListeners = function() {};
+
   // Public method
   return {
     init: function() {
