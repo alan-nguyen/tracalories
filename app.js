@@ -54,6 +54,12 @@ const UICtrl = (function () {
       // Insert list items
       document.querySelector(UISelectors.itemList).innerHTML = html;
     },
+    getItemInput: function () {
+      return {
+        name: '',
+        calories: '',
+      };
+    },
     getSelectors: function () {
       return UISelectors;
     },
