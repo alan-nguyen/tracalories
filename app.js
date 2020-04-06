@@ -1,9 +1,9 @@
 // Storage Controller
 
 // Item Controller
-const ItemCtrl = (function() {
+const ItemCtrl = (function () {
   // Item Constructor
-  const Item = function(id, name, calories) {
+  const Item = function (id, name, calories) {
     this.id = id;
     this.name = name;
     this.calories = calories;
@@ -14,35 +14,35 @@ const ItemCtrl = (function() {
     items: [
       { id: 0, name: 'Steak Dinner', calories: 1200 },
       { id: 1, name: 'Cookies', calories: 400 },
-      { id: 2, name: 'Yogurt', calories: 200 }
+      { id: 2, name: 'Yogurt', calories: 200 },
     ],
     currentItem: null,
-    totalCalories: 0
+    totalCalories: 0,
   };
 
   // Public method
   return {
-    getItems: function() {
+    getItems: function () {
       return data.items;
     },
-    logData: function() {
+    logData: function () {
       return data;
-    }
+    },
   };
 })();
 
 // UI Controller
-const UICtrl = (function() {
+const UICtrl = (function () {
   const UISelectors = {
     itemList: '#item-list',
-    addBtn: '.add-btn'
+    addBtn: '.add-btn',
   };
   // Public methods
   return {
-    populateItemList: function(items) {
+    populateItemList: function (items) {
       let html = '';
 
-      items.forEach(function(item) {
+      items.forEach(function (item) {
         html += `<li class="collection-item" id="item-${item.id}">
         <strong>${item.name}: </strong> <em>${item.calories} Calories</em>
         <a href="#" class="secondary-content">
@@ -54,16 +54,16 @@ const UICtrl = (function() {
       // Insert list items
       document.querySelector(UISelectors.itemList).innerHTML = html;
     },
-    getSelectors: function() {
+    getSelectors: function () {
       return UISelectors;
-    }
+    },
   };
 })();
 
 // App Controller
-const App = (function(ItemCtrl, UICtrl) {
+const App = (function (ItemCtrl, UICtrl) {
   // Load event listeners
-  const loadEventListeners = function() {
+  const loadEventListeners = function () {
     // Get UI selectors
     const UISelectors = UICtrl.getSelectors();
 
@@ -74,21 +74,25 @@ const App = (function(ItemCtrl, UICtrl) {
   };
 
   // Add item submit
-  const itemAddSubmit = function(e) {
-    console.log('Add');
+  const itemAddSubmit = function (e) {
+    // Get form input from UI Controller
+    const input = UICtrl.getItemInput();
 
     e.preventDefault();
   };
 
   // Public method
   return {
-    init: function() {
+    init: function () {
       // Fetch items from data structure
       const items = ItemCtrl.getItems();
 
       // Populate list with items
       UICtrl.populateItemList(items);
-    }
+
+      // Load event listeners
+      loadEventListeners();
+    },
   };
 })(ItemCtrl, UICtrl);
 
