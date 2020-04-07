@@ -150,6 +150,13 @@ const App = (function (ItemCtrl, UICtrl) {
       // Fetch items from data structure
       const items = ItemCtrl.getItems();
 
+      // Check if any items
+      if (items.length === 0) {
+        UICtrl.hideList();
+      } else {
+        UICtrl.populateItemList(items);
+      }
+
       // Populate list with items
       UICtrl.populateItemList(items);
 
