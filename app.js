@@ -104,9 +104,7 @@ const UICtrl = (function () {
       document.querySelector(UISelectors.itemCaloriesInput).value = '';
     },
     hideList: function () {
-      document.querySelector(
-        UISelectors.itemList
-      ).getElementsByClassName.display = 'none';
+      document.querySelector(UISelectors.itemList).style.display = 'none';
     },
     getSelectors: function () {
       return UISelectors;
