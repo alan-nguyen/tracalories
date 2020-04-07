@@ -33,6 +33,9 @@ const ItemCtrl = (function () {
       } else {
         ID = 0;
       }
+
+      // Calories to number
+      caloreis = parseInt(calories);
     },
     logData: function () {
       return data;
