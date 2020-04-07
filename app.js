@@ -103,6 +103,11 @@ const UICtrl = (function () {
       document.querySelector(UISelectors.itemNameInput).value = '';
       document.querySelector(UISelectors.itemCaloriesInput).value = '';
     },
+    hideList: function () {
+      document.querySelector(
+        UISelectors.itemList
+      ).getElementsByClassName.display = 'none';
+    },
     getSelectors: function () {
       return UISelectors;
     },
