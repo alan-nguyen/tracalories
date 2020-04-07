@@ -129,6 +129,9 @@ const App = (function (ItemCtrl, UICtrl) {
       const newItem = ItemCtrl.addItem(input.name, input.calories);
       // Add item to UI list
       UICtrl.addListItem(newItem);
+
+      // Clear fields
+      UICtrl.clearInput();
     }
 
     e.preventDefault();
