@@ -36,6 +36,9 @@ const ItemCtrl = (function () {
 
       // Calories to number
       caloreis = parseInt(calories);
+
+      // Create new item
+      newItem = new Item(ID, name, calories);
     },
     logData: function () {
       return data;
