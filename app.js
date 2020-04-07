@@ -39,6 +39,11 @@ const ItemCtrl = (function () {
 
       // Create new item
       newItem = new Item(ID, name, calories);
+
+      // Add to items array
+      data.items.push(newItem);
+
+      return newItem;
     },
     logData: function () {
       return data;
