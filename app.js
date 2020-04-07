@@ -35,7 +35,7 @@ const ItemCtrl = (function () {
       }
 
       // Calories to number
-      caloreis = parseInt(calories);
+      calories = parseInt(calories);
 
       // Create new item
       newItem = new Item(ID, name, calories);
@@ -49,7 +49,7 @@ const ItemCtrl = (function () {
       let total = 0;
 
       data.items.forEach(function (item) {
-        total += item.caloreis;
+        total += item.calories;
       });
 
       // Set total cal in data structure
@@ -71,6 +71,7 @@ const UICtrl = (function () {
     addBtn: '.add-btn',
     itemNameInput: '#item-name',
     itemCaloriesInput: '#item-calories',
+    totalCalories: '.total-calories',
   };
   // Public methods
   return {
@@ -118,9 +119,15 @@ const UICtrl = (function () {
       document.querySelector(UISelectors.itemNameInput).value = '';
       document.querySelector(UISelectors.itemCaloriesInput).value = '';
     },
+    showTotalCalories: function (totalCalories) {
+      document.querySelector(
+        UISelectors.totalCalories
+      ).textContent = totalCalories;
+    },
     hideList: function () {
       document.querySelector(UISelectors.itemList).style.display = 'none';
     },
+
     getSelectors: function () {
       return UISelectors;
     },
