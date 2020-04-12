@@ -154,7 +154,7 @@ const UICtrl = (function () {
         .querySelector(UISelectors.itemList)
         .insertAdjacentElement('beforeend', li);
     },
-    updateItem: function (item) {
+    updateListItem: function (item) {
       let listItems = document.querySelectorAll(UISelectors.listItems);
 
       // Turn Node list into array
