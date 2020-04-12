@@ -128,6 +128,10 @@ const UICtrl = (function () {
       document.querySelector(UISelectors.itemList).style.display = 'none';
     },
 
+    clearEditState: function () {
+      UICtrl.clearInput();
+    },
+
     getSelectors: function () {
       return UISelectors;
     },
