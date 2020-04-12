@@ -284,6 +284,9 @@ const App = (function (ItemCtrl, UICtrl) {
     // Update item
     const updateItem = ItemCtrl.updateItem(input.name, input.calories);
 
+    // Update UI
+    UICtrl.updateListItem(updateItem);
+
     e.preventDefault();
   };
 
