@@ -214,6 +214,9 @@ const App = (function (ItemCtrl, UICtrl) {
 
       // Get item
       const itemToEdit = ItemCtrl.getItemById(id);
+
+      // Set current item
+      ItemCtrl.setCurrentItem(itemToEdit);
     }
 
     e.preventDefault();
