@@ -149,6 +149,7 @@ const UICtrl = (function () {
       document.querySelector(
         UISelectors.itemCaloriesInput
       ).value = ItemCtrl.getCurrentItem().calories;
+      UICtrl.showEditState();
     },
     showTotalCalories: function (totalCalories) {
       document.querySelector(
