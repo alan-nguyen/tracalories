@@ -262,7 +262,12 @@ const App = (function (ItemCtrl, UICtrl) {
 
   // Update item to submit
   const itemUpdateSubmit = function (e) {
-    console.log('update');
+    // Get item input
+    const input = UICtrl.getItemInput();
+
+    // Update item
+    const updateItem = ItemCtrl.updateItem(input.name, input.calories);
+
     e.preventDefault();
   };
 
