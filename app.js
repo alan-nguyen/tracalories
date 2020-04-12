@@ -252,6 +252,12 @@ const App = (function (ItemCtrl, UICtrl) {
     e.preventDefault();
   };
 
+  // Update item to submit
+  const itemUpdateSubmit = function (e) {
+    console.log('update');
+    e.preventDefault();
+  };
+
   // Public method
   return {
     init: function () {
