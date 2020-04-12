@@ -188,6 +188,25 @@ const App = (function (ItemCtrl, UICtrl) {
     e.preventDefault();
   };
 
+  // Update item submit
+  const itemUpdateSubmit = function (e) {
+    if (e.target.classList.contains('edit-item')) {
+      // Get list item id
+      const listId = e.target.parentNode.parentNode.id;
+
+      // Break into an array
+      const listIdArr = listId.split('-');
+
+      // Get the actual id
+      const id = parseInt(listIdArr[1]);
+
+      // Get item
+      const itemToEdit = ItemCtrl.getItemById(id);
+    }
+
+    e.preventDefault();
+  };
+
   // Public method
   return {
     init: function () {
