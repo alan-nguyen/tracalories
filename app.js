@@ -186,6 +186,9 @@ const App = (function (ItemCtrl, UICtrl) {
   // Public method
   return {
     init: function () {
+      // Clear edit state
+      UICtrl.clearEditState();
+
       // Fetch items from data structure
       const items = ItemCtrl.getItems();
 
