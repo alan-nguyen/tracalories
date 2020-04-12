@@ -45,6 +45,18 @@ const ItemCtrl = (function () {
 
       return newItem;
     },
+
+    getItemById: function (id) {
+      let found = null;
+      // Loop through items
+      data.items.forEach(function (item) {
+        if (item.id === id) {
+          found = item;
+        }
+      });
+      return found;
+    },
+
     getTotalCalories: function () {
       let total = 0;
 
