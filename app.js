@@ -57,6 +57,10 @@ const ItemCtrl = (function () {
       return found;
     },
 
+    setCurrentItem: function (item) {
+      data.currentItem = item;
+    },
+
     getTotalCalories: function () {
       let total = 0;
 
