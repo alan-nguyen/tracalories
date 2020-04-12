@@ -103,6 +103,7 @@ const ItemCtrl = (function () {
 const UICtrl = (function () {
   const UISelectors = {
     itemList: '#item-list',
+    listItems: '#item-list li',
     addBtn: '.add-btn',
     updateBtn: '.update-btn',
     deleteBtn: '.delete-btn',
@@ -152,6 +153,25 @@ const UICtrl = (function () {
       document
         .querySelector(UISelectors.itemList)
         .insertAdjacentElement('beforeend', li);
+    },
+    updateItem: function (item) {
+      let listItems = document.querySelectorAll(UISelectors.listItems);
+
+      // Turn Node list into array
+      listItems = Array.from(listItems);
+
+      listItems.forEach(function (listItem) {
+        const itemId = listItem.getAttribute('id');
+
+        if (itemId === `item-${item.id}`) {
+          document.querySelector(
+            `#${itemId}`
+          ).innerHTML = `<strong>${item.name}: </strong> <em>${item.calories} Calories</em>
+          <a href="#" class="secondary-content">
+            <i class="edit-item fa fa-pencil"></i>
+          </a>`;
+        }
+      });
     },
     clearInput: function () {
       document.querySelector(UISelectors.itemNameInput).value = '';
