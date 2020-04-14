@@ -240,6 +240,11 @@ const App = (function (ItemCtrl, UICtrl) {
       .querySelector(UISelectors.itemList)
       .addEventListener('click', itemEditClick);
 
+    // Delete item event
+    document
+      .querySelector(UISelectors.updateBtn)
+      .addEventListener('click', itemDeleteSubmit);
+
     // Update item event
     document
       .querySelector(UISelectors.updateBtn)
