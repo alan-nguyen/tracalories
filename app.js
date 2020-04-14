@@ -345,8 +345,11 @@ const App = (function (ItemCtrl, UICtrl) {
     // Get current item
     const currentItem = ItemCtrl.getCurrentItem();
 
-    // Delet from data structure;
+    // Delete from data structure;
     ItemCtrl.deleteItem(currentItem.id);
+
+    // Delete from UI
+    UICtrl.deleteListItem(currentItem.id);
 
     e.preventDefault();
   };
