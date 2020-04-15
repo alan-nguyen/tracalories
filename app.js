@@ -380,6 +380,9 @@ const App = (function (ItemCtrl, UICtrl) {
   const clearAllItemsClick = function () {
     // Delete all items from data structure
     ItemCtrl.clearAllItems();
+
+    // Remove from UI
+    UICtrl.removeItems();
   };
 
   // Public method
