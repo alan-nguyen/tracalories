@@ -120,6 +120,7 @@ const UICtrl = (function () {
     updateBtn: '.update-btn',
     deleteBtn: '.delete-btn',
     backBtn: '.back-btn',
+    clearBtn: '.clear-btn',
     itemNameInput: '#item-name',
     itemCaloriesInput: '#item-calories',
     totalCalories: '.total-calories',
@@ -271,6 +272,11 @@ const App = (function (ItemCtrl, UICtrl) {
     document
       .querySelector(UISelectors.backBtn)
       .addEventListener('click', UICtrl.clearEditState);
+
+    // Clear items event
+    document
+      .querySelector(UISelectors.clearBtn)
+      .addEventListener('click', UICtrl.clearAllItemClick);
   };
 
   // Add item submit
