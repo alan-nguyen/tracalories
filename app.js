@@ -279,7 +279,7 @@ const App = (function (ItemCtrl, UICtrl) {
     // Clear items event
     document
       .querySelector(UISelectors.clearBtn)
-      .addEventListener('click', UICtrl.clearAllItemClick);
+      .addEventListener('click', clearAllItemsClick);
   };
 
   // Add item submit
@@ -377,7 +377,7 @@ const App = (function (ItemCtrl, UICtrl) {
   };
 
   // Clear items event
-  const clearAllItemClick = function () {
+  const clearAllItemsClick = function () {
     // Delete all items from data structure
     ItemCtrl.clearAllItems();
   };
