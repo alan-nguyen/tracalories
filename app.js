@@ -373,6 +373,12 @@ const App = (function (ItemCtrl, UICtrl) {
     e.preventDefault();
   };
 
+  // Clear items event
+  const clearAllItemClick = function () {
+    // Delete all items from data structure
+    ItemCtrl.clearAllItems();
+  };
+
   // Public method
   return {
     init: function () {
