@@ -208,6 +208,16 @@ const UICtrl = (function () {
       ).value = ItemCtrl.getCurrentItem().calories;
       UICtrl.showEditState();
     },
+    removeItems: function () {
+      let listItems = document.querySelectorAll(UISelectors.listItems);
+
+      // Turn Node list into array
+      listItems = Array.from(listItems);
+
+      listItems.forEach(function (item) {
+        item.remove();
+      });
+    },
     showTotalCalories: function (totalCalories) {
       document.querySelector(
         UISelectors.totalCalories
