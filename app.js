@@ -2,7 +2,26 @@
 const StorageCtrl = (function () {
   // Public method
   return {
-    storeItem: function () {},
+    storeItem: function (item) {
+      let items = [];
+      // Check if any items in LS
+      if (localStorage.getItem('items') === null) {
+        items = [];
+        // Push new item
+        items.push(item);
+        //Set LS
+        localStorage.setItem('items', JSON.stringify(items));
+      } else {
+        // Get what is already in LS
+        items = JSON.parse(localStorage.getItem('items'));
+
+        // Push new item
+        items.puhs(item);
+
+        //Re set LS
+        localStorage.setItem('items', JSON.stringify(items));
+      }
+    },
   };
 })();
 
