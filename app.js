@@ -467,6 +467,9 @@ const App = (function (ItemCtrl, StorageCtrl, UICtrl) {
     // Remove from UI
     UICtrl.removeItems();
 
+    // Clear from local storage
+    StorageCtrl.clearItemsFromStorage();
+
     // Hide UL
     UICtrl.hideList();
   };
