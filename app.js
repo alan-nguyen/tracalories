@@ -16,7 +16,7 @@ const StorageCtrl = (function () {
         items = JSON.parse(localStorage.getItem('items'));
 
         // Push new item
-        items.puhs(item);
+        items.push(item);
 
         //Re set LS
         localStorage.setItem('items', JSON.stringify(items));
