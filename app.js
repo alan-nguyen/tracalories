@@ -45,11 +45,12 @@ const ItemCtrl = (function () {
 
   // Data Structure / State
   const data = {
-    items: [
-      // { id: 0, name: 'Steak Dinner', calories: 1200 },
-      // { id: 1, name: 'Cookies', calories: 400 },
-      // { id: 2, name: 'Yogurt', calories: 200 },
-    ],
+    // items: [
+    //   // { id: 0, name: 'Steak Dinner', calories: 1200 },
+    //   // { id: 1, name: 'Cookies', calories: 400 },
+    //   // { id: 2, name: 'Yogurt', calories: 200 },
+    // ],
+    items: StorageCtrl.getItemsFromStorage(),
     currentItem: null,
     totalCalories: 0,
   };
