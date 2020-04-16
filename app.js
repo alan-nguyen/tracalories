@@ -397,6 +397,9 @@ const App = (function (ItemCtrl, StorageCtrl, UICtrl) {
     // Add total calories to UI
     UICtrl.showTotalCalories(totalCalories);
 
+    // Update local storage
+    StorageCtrl.updateItemStorage(updateItem);
+
     UICtrl.clearEditState();
 
     e.preventDefault();
